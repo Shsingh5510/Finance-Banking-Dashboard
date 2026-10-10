@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finance Banking Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">F</div>
+          <div>
+            <span class="brand-name">Finance UI</span>
+            <small>Banking</small>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <button class="nav-item active">Overview</button>
+          <button class="nav-item">Accounts</button>
+          <button class="nav-item">Transactions</button>
+          <button class="nav-item">Analytics</button>
+          <button class="nav-item">Cards</button>
+          <button class="nav-item">Settings</button>
+        </nav>
+
+        <div class="mini-card">
+          <p>Cash Reserve</p>
+          <h3>$84.2K</h3>
+          <span class="positive">+8.4% vs. last month</span>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Welcome back</p>
+            <h1>Finance Dashboard</h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="ghost-btn">Export</button>
+            <button class="primary-btn">+ Add account</button>
+          </div>
+        </header>
+
+        <section id="metrics" class="metrics-grid"></section>
+
+        <section class="content-grid">
+          <div class="panel chart-panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Revenue</p>
+                <h2>Performance Overview</h2>
+              </div>
+              <button class="ghost-btn small">This year</button>
+            </div>
+            <div id="trend-chart" class="trend-chart" aria-label="Monthly revenue chart"></div>
+          </div>
+
+          <div class="panel allocation-panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Allocation</p>
+                <h2>Portfolio Mix</h2>
+              </div>
+            </div>
+            <div class="allocation-wrap">
+              <div id="portfolio-donut" class="portfolio-donut" aria-label="Portfolio allocation donut"></div>
+              <div id="allocation-list" class="allocation-list"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="bottom-grid">
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Payments</p>
+                <h2>Recent Transactions</h2>
+              </div>
+              <button class="ghost-btn small">View all</button>
+            </div>
+            <div id="transactions" class="transactions"></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Insights</p>
+                <h2>Smart Summary</h2>
+              </div>
+            </div>
+            <div class="insights">
+              <div class="insight-item">
+                <span class="pill success">Strong</span>
+                <h3>Cash flow up 18%</h3>
+                <p>Operating cash inflow remains healthy across the last 6 months.</p>
+              </div>
+              <div class="insight-item">
+                <span class="pill warning">Watch</span>
+                <h3>Risk exposure</h3>
+                <p>Credit card utilization is slightly elevated but still within threshold.</p>
+              </div>
+              <div class="insight-item">
+                <span class="pill neutral">Plan</span>
+                <h3>Budget advice</h3>
+                <p>Shift 8% of discretionary spend to savings goal for next quarter.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
